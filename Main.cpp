@@ -42,17 +42,17 @@ int main()
 	node2.value = 44;
 	node3.value = 14;
 
-	//link up all the nodes
-	list_head = &node1; //dereferencing
-	node1.next = &node2;
-	node2.next = &node3;
-	node3.next = &node4; //tail - NULL indicates where to stop
-
 	//adding two new nodes
 	node4.value = 4;
 	node5.value = 5;
+
+	//link up all the nodes
+	list_head = &node1;
+	node1.next = &node2;
+	node2.next = &node3;
+	node3.next = &node4;
 	node4.next = &node5;
-	node5.next = NULL;
+	node5.next = NULL; //tail - NULL indicates where to stop
 
 	//Display it
 	printList(list_head);
